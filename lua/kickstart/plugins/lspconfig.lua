@@ -241,5 +241,19 @@ return {
       }
     end,
   },
+  {
+    'nvimdev/lspsaga.nvim',
+    config = function()
+      require('lspsaga').setup {
+        ui = {
+          code_action = '',
+        },
+      }
+    end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- optional
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+  },
 }
 -- vim: ts=2 sts=2 sw=2 et
