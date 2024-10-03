@@ -8,6 +8,7 @@ return {
     -- 'rose-pine/neovim',
     -- 'AlexvZyl/nordic.nvim',
     'bluz71/vim-moonfly-colors',
+    -- 'Tsuzat/NeoSolarized.nvim',
     priority = 1000,
     config = function()
       -- vim.cmd.colorscheme 'onedark'
@@ -18,6 +19,7 @@ return {
       -- vim.cmd.colorscheme 'rose-pine'
       -- vim.cmd.colorscheme 'nordic'
       vim.cmd.colorscheme 'moonfly'
+      -- vim.cmd.colorscheme 'NeoSolarized'
     end,
   },
 }
