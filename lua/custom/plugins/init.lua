@@ -21,4 +21,10 @@ return {
       width = 60,
     },
   },
+
+  -- custom tabs
+  'nanozuki/tabby.nvim',
+  config = function()
+    vim.o.showtabline = 2
+  end,
 }

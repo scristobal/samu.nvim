@@ -7,9 +7,10 @@ return {
     -- 'rebelot/kanagawa.nvim',
     -- 'rose-pine/neovim',
     -- 'AlexvZyl/nordic.nvim',
-    -- 'bluz71/vim-moonfly-colors',
-    'Tsuzat/NeoSolarized.nvim',
+    'bluz71/vim-moonfly-colors',
+    -- 'Tsuzat/NeoSolarized.nvim',
     -- 'RRethy/base16-nvim',
+    -- 'EdenEast/nightfox.nvim',
     priority = 1000,
     config = function()
       -- vim.cmd.colorscheme 'onedark'
@@ -19,9 +20,10 @@ return {
       -- vim.cmd.colorscheme 'kanagawa-dragon'
       -- vim.cmd.colorscheme 'rose-pine'
       -- vim.cmd.colorscheme 'nordic'
-      -- vim.cmd.colorscheme 'moonfly'
-      vim.cmd.colorscheme 'NeoSolarized'
+      vim.cmd.colorscheme 'moonfly'
+      -- vim.cmd.colorscheme 'NeoSolarized'
       -- vim.cmd.colorscheme 'base16-default-dark'
+      -- vim.cmd.colorscheme 'carbonfox'
     end,
   },
 }
