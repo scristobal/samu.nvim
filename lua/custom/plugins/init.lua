@@ -23,8 +23,19 @@ return {
   },
 
   -- custom tabs
-  'nanozuki/tabby.nvim',
-  config = function()
-    vim.o.showtabline = 2
-  end,
+  {
+    'nanozuki/tabby.nvim',
+    config = function()
+      vim.o.showtabline = 2
+    end,
+  },
+
+  -- surround words/blocks/whatever with " ' <tag> and so
+  {
+    'kylechui/nvim-surround',
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {}
+    end,
+  },
 }
