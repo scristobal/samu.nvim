@@ -4,9 +4,9 @@ return {
   -- 'folke/tokyonight.nvim',
   -- 'bluz71/vim-nightfly-colors',
   -- 'rebelot/kanagawa.nvim',
-  'rose-pine/neovim',
+  -- 'rose-pine/neovim',
   -- 'AlexvZyl/nordic.nvim',
-  -- 'bluz71/vim-moonfly-colors',
+  'bluz71/vim-moonfly-colors',
   -- 'Tsuzat/NeoSolarized.nvim',
   -- 'RRethy/base16-nvim',
   -- 'EdenEast/nightfox.nvim',
@@ -17,15 +17,15 @@ return {
     -- vim.cmd.colorscheme 'PaperColor'
     -- vim.cmd.colorscheme 'tokyonight'
     -- vim.cmd.colorscheme 'nightfly'
-    ---vim.cmd.colorscheme 'kanagawa-dragon'
-    vim.cmd.colorscheme 'rose-pine'
+    -- vim.cmd.colorscheme 'kanagawa-dragon'
+    -- vim.cmd.colorscheme 'rose-pine'
     -- vim.cmd.colorscheme 'nordic'
-    -- vim.cmd.colorscheme 'moonfly'
+    vim.cmd.colorscheme 'moonfly'
     -- vim.cmd.colorscheme 'NeoSolarized'
     -- vim.cmd.colorscheme 'base16-default-dark'
     -- vim.cmd.colorscheme 'carbonfox'
     -- vim.cmd.colorscheme 'oxocarbon'
-    --
+
     -- make background transparent
     vim.opt.background = 'dark' -- dark or light
 
