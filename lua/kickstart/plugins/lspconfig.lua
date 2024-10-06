@@ -109,15 +109,15 @@ return {
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-          map('<leader>h', vim.lsp.buf.hover, '[S]how [H]over info')
+          map('<leader>sh', vim.lsp.buf.hover, '[S]how [H]over info')
 
-          -- vim.diagnostic.config {
-          --  virtual_text = false,
-          -- }
+          vim.diagnostic.config {
+            virtual_text = false,
+          }
 
           -- Show line diagnostics automatically in hover window
-          -- vim.o.updatetime = 250
-          -- vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+          vim.o.updatetime = 250
+          vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
@@ -240,6 +240,26 @@ return {
             require('lspconfig')[server_name].setup(server)
           end,
         },
+      }
+
+      vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+        border = 'rounded',
+      })
+
+      vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+        border = 'rounded',
+      })
+
+      vim.cmd [[nnoremap <buffer><silent> <C-space> :lua vim.lsp.diagnostic.show_line_diagnostics({ border = "single" })<CR>]]
+      vim.cmd [[nnoremap <buffer><silent> ]g :lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = "single" }})<CR>]]
+      vim.cmd [[nnoremap <buffer><silent> [g :lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = "single" }})<CR>]]
+
+      vim.diagnostic.config {
+        float = { border = 'rounded' },
+      }
+
+      require('lspconfig.ui.windows').default_options = {
+        border = 'rounded',
       }
     end,
   },

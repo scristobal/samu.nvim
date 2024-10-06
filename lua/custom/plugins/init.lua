@@ -23,12 +23,12 @@ return {
   },
 
   -- custom tabs
-  {
-    'nanozuki/tabby.nvim',
-    config = function()
-      vim.o.showtabline = 2
-    end,
-  },
+  -- {
+  --   'nanozuki/tabby.nvim',
+  --   config = function()
+  --     vim.o.showtabline = 2
+  --   end,
+  -- },
 
   -- surround words/blocks/whatever with " ' <tag> and so
   {
@@ -37,5 +37,9 @@ return {
     config = function()
       require('nvim-surround').setup {}
     end,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
 }
