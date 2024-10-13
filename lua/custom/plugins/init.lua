@@ -50,4 +50,8 @@ return {
       sections = { lualine_b = { { 'branch', icon = '' } } },
     },
   },
+  {
+    'petertriho/nvim-scrollbar',
+    opts = {},
+  },
 }
