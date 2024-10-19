@@ -54,4 +54,17 @@ return {
     'petertriho/nvim-scrollbar',
     opts = {},
   },
+
+  -- trigger available moves on current line
+  {
+    'tris203/precognition.nvim',
+    opts = {},
+  },
+
+  -- shows missed oportunities for optimal moves
+  {
+    'm4xshen/hardtime.nvim',
+    dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+    opts = {},
+  },
 }
