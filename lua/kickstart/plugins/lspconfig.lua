@@ -13,6 +13,8 @@ return {
     },
   },
   { 'Bilal2453/luvit-meta', lazy = true },
+  -- required by jsonls to load schemas, eg. $schema = ...
+  { 'b0o/schemastore.nvim' },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -197,6 +199,17 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
         --
+
+        jsonls = {
+          opts = {
+            settings = {
+              json = {
+                schemas = require('schemastore').json.schemas(),
+                validate = { enable = true },
+              },
+            },
+          },
+        },
 
         tailwindcss = {},
 
