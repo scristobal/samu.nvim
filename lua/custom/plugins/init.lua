@@ -3,13 +3,10 @@
 --
 -- See the kickstart.nvim README for more information
 
--- relative line numbers
-vim.wo.number = true
-
 return {
 
   -- Relative line numbers
-  'sitiom/nvim-numbertoggle',
+  -- 'sitiom/nvim-numbertoggle',
 
   -- show code docs on a separate pannel
   {
