@@ -66,21 +66,37 @@ return {
   --  },
   --
   --
+  --  {
+  --    'rachartier/tiny-inline-diagnostic.nvim',
+  --    event = 'VeryLazy', -- Or `LspAttach`
+  --    priority = 1000, -- needs to be loaded in first
+  --    config = function()
+  --      require('tiny-inline-diagnostic').setup {
+  --        preset = 'simple',
+  --        options = {
+  --          show_source = true,
+  --          use_icons_from_diagnstic = true,
+  --          multilines = {
+  --            enabled = true,
+  --          },
+  --        },
+  --      }
+  --    end,
+  --  },
+
+  -- alternative virtual text diagnostic
   {
-    'rachartier/tiny-inline-diagnostic.nvim',
-    event = 'VeryLazy', -- Or `LspAttach`
-    priority = 1000, -- needs to be loaded in first
-    config = function()
-      require('tiny-inline-diagnostic').setup {
-        preset = 'simple',
-        options = {
-          show_source = true,
-          use_icons_from_diagnstic = true,
-          multilines = {
-            enabled = true,
-          },
-        },
-      }
-    end,
+    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    opts = true,
+    keys = {
+      {
+        '<leader>ll',
+        function()
+          require('lsp_lines').toggle()
+        end,
+        mode = 'n',
+        desc = 'Toggle [L]sp virtual [L]ines',
+      },
+    },
   },
 }

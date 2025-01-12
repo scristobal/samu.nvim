@@ -114,7 +114,8 @@ return {
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- Manuallly trigger to show info on hover
-          map('<leader>sh', vim.lsp.buf.hover, '[S]how [H]over info')
+          -- This is shift-k by default
+          -- map('<leader>h', vim.lsp.buf.hover, 'Show [H]over info')
 
           -- Hide diagnostics text
           -- this is recommended by https://github.com/rachartier/tiny-inline-diagnostic.nvim plugin
