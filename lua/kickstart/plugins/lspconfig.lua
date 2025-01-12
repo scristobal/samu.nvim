@@ -117,8 +117,13 @@ return {
           map('<leader>sh', vim.lsp.buf.hover, '[S]how [H]over info')
 
           -- Hide diagnostics text
+          -- this is recommended by https://github.com/rachartier/tiny-inline-diagnostic.nvim plugin
+          vim.diagnostic.config {
+            virtual_text = false,
+          }
+          -- alternatively only show on the current line
           -- vim.diagnostic.config {
-          --   virtual_text = false,
+          --  virtual_lines = { only_current_line = true },
           -- }
 
           -- Show line diagnostics automatically in hover window
