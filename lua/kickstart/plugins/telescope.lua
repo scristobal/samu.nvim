@@ -67,6 +67,7 @@ return {
             require('telescope.themes').get_dropdown(),
           },
         },
+        style = 'bordered',
       }
 
       -- Enable Telescope extensions if they are installed
