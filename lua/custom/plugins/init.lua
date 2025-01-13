@@ -4,6 +4,17 @@
 -- See the kickstart.nvim README for more information
 
 return {
+  -- Welcome dashboard
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {
+        theme = 'hyper',
+      }
+    end,
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+  },
 
   -- Relative line numbers
   -- 'sitiom/nvim-numbertoggle',
@@ -90,13 +101,16 @@ return {
     opts = true,
     keys = {
       {
-        '<leader>ll',
+        '<leader>l',
         function()
           require('lsp_lines').toggle()
         end,
         mode = 'n',
-        desc = 'Toggle [L]sp virtual [L]ines',
+        desc = 'Toggle lsp virtual [L]ines',
       },
     },
   },
+
+  -- Trouble pannel
+  'folke/trouble.nvim',
 }

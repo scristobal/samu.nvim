@@ -5,10 +5,10 @@ return {
   -- 'bluz71/vim-nightfly-colors',
   -- 'rebelot/kanagawa.nvim',
   -- 'rose-pine/neovim',
-  -- 'AlexvZyl/nordic.nvim',
+  'AlexvZyl/nordic.nvim',
   -- 'bluz71/vim-moonfly-colors',
   -- 'Tsuzat/NeoSolarized.nvim',
-  'RRethy/base16-nvim',
+  -- 'RRethy/base16-nvim',
   -- 'EdenEast/nightfox.nvim',
   -- 'nyoom-engineering/oxocarbon.nvim',
 
@@ -20,10 +20,10 @@ return {
     -- vim.cmd.colorscheme 'nightfly'
     -- vim.cmd.colorscheme 'kanagawa-dragon'
     -- vim.cmd.colorscheme 'rose-pine'
-    -- vim.cmd.colorscheme 'nordic'
+    vim.cmd.colorscheme 'nordic'
     -- vim.cmd.colorscheme 'moonfly'
     -- vim.cmd.colorscheme 'NeoSolarized'
-    vim.cmd.colorscheme 'base16-default-dark'
+    -- vim.cmd.colorscheme 'base16-default-dark'
     -- vim.cmd.colorscheme 'carbonfox'
     -- vim.cmd.colorscheme 'oxocarbon'
   end,

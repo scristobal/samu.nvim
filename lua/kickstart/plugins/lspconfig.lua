@@ -216,7 +216,9 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
-        --
+
+        -- Deno language server
+        denols = {},
 
         jsonls = {
           opts = {
@@ -298,6 +300,23 @@ return {
 
       require('lspconfig.ui.windows').default_options = {
         border = 'rounded',
+      }
+
+      -- additional Deno config https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#denols
+      vim.g.markdown_fenced_languages = {
+        'ts=typescript',
+      }
+      -- avoid deno and ts lsp to both attach https://docs.deno.com/runtime/getting_started/setup_your_environment/#neovim-0.6%2B-using-the-built-in-language-server
+      local nvim_lsp = require 'lspconfig'
+      nvim_lsp.denols.setup {
+        on_attach = on_attach,
+        root_dir = nvim_lsp.util.root_pattern('deno.json', 'deno.jsonc'),
+      }
+
+      nvim_lsp.ts_ls.setup {
+        on_attach = on_attach,
+        root_dir = nvim_lsp.util.root_pattern 'package.json',
+        single_file_support = false,
       }
     end,
   },
