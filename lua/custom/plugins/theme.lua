@@ -57,7 +57,7 @@ return {
       end,
     }
 
-    vim.cmd.colorscheme 'kanagawa-dragon'
+    vim.cmd.colorscheme 'kanagawa'
 
     -- vim.cmd.colorscheme 'rose-pine'
     -- vim.cmd.colorscheme 'nordic'
