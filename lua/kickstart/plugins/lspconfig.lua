@@ -233,7 +233,7 @@ return {
         clangd = {},
         -- gopls = {},
         pyright = {},
-        ruff_lsp = {},
+        -- ruff_lsp = {},
         rust_analyzer = {
           checkOnSave = {
             allFeatures = true,
