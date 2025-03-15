@@ -220,6 +220,12 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+      -- Add folding capabilities required by ufo.nvim
+      capabilities.textDocument.foldingRange = {
+        dynamicRegistration = false,
+        lineFoldingOnly = true,
+      }
+
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
@@ -232,13 +238,14 @@ return {
       local servers = {
         clangd = {},
         -- gopls = {},
-        -- pyright = {},
-        rust_analyzer = {
-          checkOnSave = {
-            allFeatures = true,
-            command = 'clippy',
-          },
-        },
+        pyright = {},
+        -- Rust is managed by https://github.com/mrcjkb/rustaceanvim
+        --  rust_analyzer = {
+        --    checkOnSave = {
+        --      allFeatures = true,
+        --      command = 'clippy',
+        --    },
+        --  },
         zls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
