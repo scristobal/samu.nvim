@@ -5,11 +5,10 @@
 
 return {
   -- extra Rust stuff
-  {
-    'mrcjkb/rustaceanvim',
-    version = '^5', -- Recommended
-    lazy = false, -- This plugin is already lazy
-  },
+  --  {
+  --    'mrcjkb/rustaceanvim',
+  --    version = '^5', -- Recommended
+  --  },
 
   -- improved folding
   {
@@ -40,16 +39,16 @@ return {
   },
 
   -- Welcome dashboard
-  {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        theme = 'hyper',
-      }
-    end,
-    dependencies = { { 'nvim-tree/nvim-web-devicons' } },
-  },
+  -- {
+  --   'nvimdev/dashboard-nvim',
+  --   event = 'VimEnter',
+  --   config = function()
+  --     require('dashboard').setup {
+  --       theme = 'hyper',
+  --     }
+  --   end,
+  --   dependencies = { { 'nvim-tree/nvim-web-devicons' } },
+  -- },
 
   -- Relative line numbers
   -- 'sitiom/nvim-numbertoggle',
@@ -74,13 +73,14 @@ return {
   -- },
 
   -- surround words/blocks/whatever with " ' <tag> and so
-  {
-    'kylechui/nvim-surround',
-    event = 'VeryLazy',
-    config = function()
-      require('nvim-surround').setup {}
-    end,
-  },
+  -- {
+  --   'kylechui/nvim-surround',
+  --   event = 'VeryLazy',
+  --   config = function()
+  --     require('nvim-surround').setup {}
+  --   end,
+  -- },
+
   {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -93,10 +93,12 @@ return {
       sections = { lualine_b = { { 'branch', icon = '' } } },
     },
   },
-  {
-    'petertriho/nvim-scrollbar',
-    opts = {},
-  },
+
+  -- show a scrollbar on the side
+  -- {
+  --   'petertriho/nvim-scrollbar',
+  --   opts = {},
+  -- },
 
   -- trigger available moves on current line
   --  {
@@ -158,5 +160,5 @@ return {
   },
 
   -- Trouble pannel
-  -- 'folke/trouble.nvim',
+  'folke/trouble.nvim',
 }

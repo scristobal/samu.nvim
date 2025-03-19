@@ -239,13 +239,12 @@ return {
         clangd = {},
         -- gopls = {},
         pyright = {},
-        -- Rust is managed by https://github.com/mrcjkb/rustaceanvim
-        --  rust_analyzer = {
-        --    checkOnSave = {
-        --      allFeatures = true,
-        --      command = 'clippy',
-        --    },
-        --  },
+        rust_analyzer = {
+          checkOnSave = {
+            allFeatures = true,
+            command = 'clippy',
+          },
+        },
         -- ruff_lsp = {},
         zls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
