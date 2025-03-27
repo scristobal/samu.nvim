@@ -31,7 +31,7 @@ return {
     lazy = true,
     cmd = { 'Outline', 'OutlineOpen' },
     keys = { -- Example mapping to toggle outline
-      { '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle outline' },
+      { '<leader>o', '<cmd>Outline<CR>', desc = 'Toggle [o]utline' },
     },
     opts = {
       -- Your setup opts here
@@ -133,7 +133,7 @@ return {
         lualine_y = {
           {
             'lsp_status',
-            icon = '', -- f013
+            icon = '', -- f233
             symbols = {
               -- Standard unicode symbols to cycle through for LSP progress:
               spinner = { '⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏' },
