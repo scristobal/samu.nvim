@@ -201,20 +201,20 @@ return {
   --  },
 
   -- alternative virtual text diagnostic
-  {
-    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-    opts = true,
-    keys = {
-      {
-        '<leader>l',
-        function()
-          require('lsp_lines').toggle()
-        end,
-        mode = 'n',
-        desc = 'Toggle lsp virtual [L]ines',
-      },
-    },
-  },
+  --  {
+  --    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+  --    opts = true,
+  --    keys = {
+  --      {
+  --        '<leader>l',
+  --        function()
+  --          require('lsp_lines').toggle()
+  --        end,
+  --        mode = 'n',
+  --        desc = 'Toggle lsp virtual [L]ines',
+  --      },
+  --    },
+  --  },
 
   -- Trouble pannel
   'folke/trouble.nvim',

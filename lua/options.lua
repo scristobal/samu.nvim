@@ -68,4 +68,19 @@ vim.opt.scrolloff = 10
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
+-- make all floating windows rounded
+vim.o.winborder = 'rounded'
+
+-- replaces lsp_lines.nvim
+vim.diagnostic.config {
+  -- Use the default configuration
+  virtual_lines = true,
+
+  -- Alternatively, customize specific options
+  -- virtual_lines = {
+  --  -- Only show virtual line diagnostics for the current cursor line
+  --  current_line = true,
+  -- },
+}
+
 -- vim: ts=2 sts=2 sw=2 et
