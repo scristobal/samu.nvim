@@ -110,6 +110,8 @@ else
 
   -- [[ Configure and install plugins ]]
   require 'lazy-plugins'
+
+  require 'fixes'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
