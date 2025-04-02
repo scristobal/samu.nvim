@@ -131,7 +131,6 @@ return {
           -- Hide diagnostics text
           -- this is recommended by https://github.com/rachartier/tiny-inline-diagnostic.nvim plugin
           vim.diagnostic.config {
-
             underline = true,
             virtual_text = false,
           }
@@ -250,7 +249,6 @@ return {
         },
         -- ruff_lsp = {},
         zls = {},
-        gleam = {},
 
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -331,13 +329,13 @@ return {
         },
       }
 
-      vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = 'rounded',
-      })
-
-      vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = 'rounded',
-      })
+      -- LSP borders config, deprecated in vim 0.11
+      -- vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+      --   border = 'rounded',
+      -- })
+      -- vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+      --   border = 'rounded',
+      -- })
 
       vim.cmd [[nnoremap <buffer><silent> <C-space> :lua vim.lsp.diagnostic.show_line_diagnostics({ border = "single" })<CR>]]
       vim.cmd [[nnoremap <buffer><silent> ]g :lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = "single" }})<CR>]]
