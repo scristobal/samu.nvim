@@ -130,9 +130,10 @@ return {
 
           -- Hide diagnostics text
           -- this is recommended by https://github.com/rachartier/tiny-inline-diagnostic.nvim plugin
-          vim.diagnostic.config {
-            virtual_text = false,
-          }
+          --  vim.diagnostic.config {
+          --    virtual_text = false,
+          --  }
+
           -- alternatively only show on the current line
           -- vim.diagnostic.config {
           --  virtual_lines = { only_current_line = true },
@@ -248,6 +249,7 @@ return {
         -- ruff_lsp = {},
         zls = {},
         gleam = {},
+
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -302,17 +304,17 @@ return {
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       --
-      -- local ensure_installed = vim.tbl_keys(servers or {})
-      -- vim.list_extend(ensure_installed, {
-      --   'stylua', -- Used to format Lua code
-      --   'markdownlint', --
-      --   'clang-format',
-      -- })
-      -- require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+      --  local ensure_installed = vim.tbl_keys(servers or {})
+      --  vim.list_extend(ensure_installed, {
+      --    'stylua', -- Used to format Lua code
+      --    'markdownlint', --
+      --    'clang-format',
+      --  })
+      --  require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_installation = false,
+        automatic_installation = true,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
