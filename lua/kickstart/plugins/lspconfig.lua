@@ -130,9 +130,11 @@ return {
 
           -- Hide diagnostics text
           -- this is recommended by https://github.com/rachartier/tiny-inline-diagnostic.nvim plugin
-          --  vim.diagnostic.config {
-          --    virtual_text = false,
-          --  }
+          vim.diagnostic.config {
+
+            underline = true,
+            virtual_text = false,
+          }
 
           -- alternatively only show on the current line
           -- vim.diagnostic.config {
