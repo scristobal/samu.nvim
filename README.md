@@ -1,3 +1,7 @@
+> [!warning]
+> Moved to dotfiles repo
+---
+
 # kickstart-modular.nvim
 
 ## Introduction
