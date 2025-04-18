@@ -1,5 +1,5 @@
 > [!warning]
-> No longer using this config. neovim config moved to dotfiles repo.
+> No longer using this repo, neovim config moved to dotfiles repo.
 ---
 
 # kickstart-modular.nvim
